@@ -17,8 +17,7 @@ public class ARGameManager : MonoBehaviour
     }
 
     void Update() {
-        Debug.Log("Update");
-
+        // Editor —p
         if (Input.GetMouseButtonDown(0)) {
             Vector2 touchPosition = Input.mousePosition;
 
@@ -43,7 +42,6 @@ public class ARGameManager : MonoBehaviour
 
         if (Input.touchCount > 0) {
             Vector2 touchPosition = Input.GetTouch(0).position;
-            touchPosition = Input.mousePosition;
 
             List<ARRaycastHit> hits = new();
 
