@@ -17,11 +17,17 @@ namespace UnityAR {
         [SerializeField]
         private Text message;
 
-        [SerializeField]
+        [SerializeField, Header("タップ時に生成するプレファブ")]
         private GameObject placementPrefab;
 
-        [SerializeField]
+        [SerializeField, Header("オクルージョン用の AROcclusionPlane プレファブ")]
         private GameObject occlusionPlane;
+
+        [SerializeField, Header("平面オクルージョン用の枠線の幅(太さ)")]
+        private float lineWidth = 0.001f;
+
+        [SerializeField, Header("平面オクルージョン用の枠線の色")]
+        private Color lineColor = Color.black;
 
         private ARPlaneManager planeManager;
         private ARRaycastManager raycastManager;
@@ -48,6 +54,7 @@ namespace UnityAR {
             TryGetComponent(out raycastManager);
             TryGetComponent(out playerInput);
 
+            // 必要なコンポーネントが取得・用意できているか確認
             if (placementPrefab == null
                 || occlusionPlane == null
                 || planeManager == null
@@ -82,6 +89,14 @@ namespace UnityAR {
                 // 平面感知したオブジェクトを非表示
                 foreach (ARPlane plane in planeManager.trackables) {
                     plane.gameObject.SetActive(false);
+                }
+
+                // AROcclusionPlane ゲームオブジェクトの LineRenderer を取得して枠線の幅と色を変える
+                if (occlusionPlane.TryGetComponent(out LineRenderer line)) {
+                    line.startWidth = lineWidth;
+                    line.endWidth = lineWidth;
+                    line.startColor = lineColor;
+                    line.endColor = lineColor;
                 }
 
                 // ARPlaneManager が平面を検出した際に表示する平面のプレファブをオクルージョン用の平面プレファブに変更
