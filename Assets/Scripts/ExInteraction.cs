@@ -57,8 +57,8 @@ public class ExInteraction : MonoBehaviour {
         // 必要なコンポーネントの情報が揃っているか、アサインがはずれていないか、確認
         if (planeManager == null
             || planeManager.planePrefab == null
-            || placementInteractable == null
-            || placementInteractable.placementPrefab == null
+            //|| placementInteractable == null
+            //|| placementInteractable.placementPrefab == null
             || gestureInteractor == null) {
             isReady = false;
             ShowMessage("エラー: SerializeFieldなどの設定不備");
@@ -74,7 +74,7 @@ public class ExInteraction : MonoBehaviour {
         // 旧式
         //placementInteractable.onObjectPlaced.AddListener(OnObjectPlaced);
         // ARSelectionInteractable によりオブジェクトが配置されたときに実行するイベントハンドラーを設定する
-        placementInteractable.objectPlaced.AddListener(OnObjectPlaced);
+        //placementInteractable.objectPlaced.AddListener(OnObjectPlaced);
 
         // 旧式
         //gestureInteractor.onHoverEntered.AddListener(OnHoverEntered);
