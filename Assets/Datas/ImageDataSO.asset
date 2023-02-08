@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageDataList:
   - id: 0
-    texture: {fileID: 2800000, guid: eb70f795ef20c9e47a22d8d698555c9c, type: 3}
+    textureMaterial: {fileID: 2100000, guid: b9e2fdf5b54a9044d9c9a760b232c9fb, type: 2}
   - id: 1
-    texture: {fileID: 2800000, guid: eb70f795ef20c9e47a22d8d698555c9c, type: 3}
+    textureMaterial: {fileID: 0}
   - id: 2
-    texture: {fileID: 2800000, guid: eb70f795ef20c9e47a22d8d698555c9c, type: 3}
+    textureMaterial: {fileID: 0}
