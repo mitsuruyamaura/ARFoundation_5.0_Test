@@ -4,7 +4,7 @@ using UnityEngine;
 public class ImageData
 {
     public int id;
-    public Texture2D texture;
+    public Material textureMaterial;
     
     // TODO 他にもあれば追加する
     
