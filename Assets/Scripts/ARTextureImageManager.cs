@@ -76,6 +76,19 @@ public class ARTextureImageManager : MonoBehaviour
                 //     spawnedObject.SetUpTextureView(0);
                 //     Debug.Log("生成");
                 // }
+                
+                if (TextureGenerator.instance.GetSpawnedObject()) {
+                    TextureGenerator.instance.MoveTextureImage(hitPose.position);
+                    //spawnedObject.transform.position = touchPosition;
+                } else {
+                    
+                    textureThumbnailPopUp.ShowPopUp(hitPose.position);
+                    
+                    
+                    // spawnedObject = Instantiate(textureViewPrefab, touchPosition, Quaternion.identity);  // , hitPose.position, Quaternion.identity
+                    // spawnedObject.SetUpTextureView(0);
+                    Debug.Log("生成");
+                }
             }
         }
     }
