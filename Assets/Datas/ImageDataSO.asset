@@ -15,7 +15,10 @@ MonoBehaviour:
   imageDataList:
   - id: 0
     textureMaterial: {fileID: 2100000, guid: b9e2fdf5b54a9044d9c9a760b232c9fb, type: 2}
+    spriteImage: {fileID: 21300000, guid: eb70f795ef20c9e47a22d8d698555c9c, type: 3}
   - id: 1
-    textureMaterial: {fileID: 0}
+    textureMaterial: {fileID: 2100000, guid: 70a2979073f79344bbaaaa506fd0df92, type: 2}
+    spriteImage: {fileID: 21300000, guid: dae33700bd23f76409a80bf78fdb8a42, type: 3}
   - id: 2
-    textureMaterial: {fileID: 0}
+    textureMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+    spriteImage: {fileID: 21300000, guid: 9e9474494461bd048803b48e391ef0f6, type: 3}
