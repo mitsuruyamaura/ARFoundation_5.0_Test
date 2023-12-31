@@ -19,7 +19,7 @@ public class DataBaseManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// 指定した番号のマテリアルの取得
     /// </summary>
     /// <param name="dataNo"></param>
     /// <returns></returns>
@@ -27,11 +27,19 @@ public class DataBaseManager : MonoBehaviour
         return imageDataSo.imageDataList.Find(x => x.id == dataNo).textureMaterial;
     }
 
+    /// <summary>
+    /// ImageDataSO に登録されている ImageData の最大値の取得
+    /// </summary>
+    /// <returns></returns>
     public int GetImageDataListCount() {
         return imageDataSo.imageDataList.Count;
     }
 
-
+    /// <summary>
+    /// 指定した番号の ImageData の取得
+    /// </summary>
+    /// <param name="searchNo"></param>
+    /// <returns></returns>
     public ImageData GetImageData(int searchNo) {
         return imageDataSo.imageDataList.Find(x => x.id == searchNo);
     }
